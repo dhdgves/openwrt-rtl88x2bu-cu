@@ -17,7 +17,7 @@ define KernelPackage/rtl88x2bu
   FILES:=\
         $(PKG_BUILD_DIR)/rtw88.ko
   AUTOLOAD:=$(call AutoProbe,rtl88x2bu)
-  PROVIDES:=kmod-rtl88x2bu_qxxmm
+  PROVIDES:=kmod-rtl8822bu
 endef
 
 NOSTDINC_FLAGS = \
