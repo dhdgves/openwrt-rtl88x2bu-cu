@@ -15,7 +15,8 @@ define KernelPackage/rtl88x2bu
   TITLE:=Driver for Realtek 88X2 BU/CU devices
   DEPENDS:=+kmod-cfg80211 +kmod-usb-core +@DRIVER_11N_SUPPORT +@DRIVER_11AC_SUPPORT +kmod-mac80211
   FILES:=\
-        $(PKG_BUILD_DIR)/rtw88.ko
+        $(PKG_BUILD_DIR)/rtw88.ko \
+        $(PKG_BUILD_DIR)/rtwusb.ko
   AUTOLOAD:=$(call AutoProbe,rtl88x2bu)
   PROVIDES:=kmod-rtl8822bu
 endef
