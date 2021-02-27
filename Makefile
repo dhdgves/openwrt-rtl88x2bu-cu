@@ -17,7 +17,8 @@ define KernelPackage/rtl88x2bu
   FILES:=\
         $(PKG_BUILD_DIR)/rtw88.ko \
         $(PKG_BUILD_DIR)/rtwusb.ko
-  AUTOLOAD:=$(call AutoProbe,rtl88x2bu)
+  AUTOLOAD:=$(call AutoProbe,rtw88) \
+	    $(call AutoProbe,rtwusb)
   PROVIDES:=kmod-rtl8822bu
 endef
 
