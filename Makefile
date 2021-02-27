@@ -41,5 +41,11 @@ define Build/Compile
                 modules
 endef
 
+define KernelPackage/rtl88x2bu/install
+       +mkdir -p $(1)/lib/firmware/rtw88 && $(CP) $(PKG_BUILD_DIR)/fw/* $(1)/lib/firmware/rtw88/
+
+       
+endef
+
 $(eval $(call KernelPackage,rtl88x2bu))
 
